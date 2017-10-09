@@ -21,12 +21,14 @@ import { reducers, metaReducers } from './store/reducers';
 import { AllEffects } from './store/effects';
 
 // Importing the pipe 
-import{KeysPipe} from './productfilter.pipe'
+import{KeysPipe} from './productfilter.pipe';
+import { HomeComponent } from './home/home.component'
 @NgModule({
   declarations: [
     AppComponent,
     COMPONENTS,
-    KeysPipe
+    KeysPipe,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

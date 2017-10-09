@@ -1,0 +1,204 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("https://www.auraortho.com/aura-ortho/wp-content/uploads/2015/06/surrey-indian-restaurant-7.jpg");
+  min-height: 450px;
+}
+
+.bgimg-2 {
+  background-image: url("http://images.dailyhive.com/20161019141754/Screen-Shot-2016-10-19-at-2.16.12-PM.jpg");
+  min-height: 450px;
+  
+
+}
+.bgimg-3 {
+  background-image: url("http://st1.bgr.in/wp-content/uploads/2015/09/food-home-delivery-stock-image.jpg");
+  min-height: 600px;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 30%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+
+h1{
+font-weight: bold;
+color:white;
+}
+h2{
+font-weight: bold;
+color:green;
+text-align: center;
+}
+h3{
+font-weight: bold;
+color:white;
+}
+
+.container{
+  font-weight: bold;
+color:white;  
+}
+h4{
+    font-size:x-large;
+    color: green; 
+}
+
+img{
+
+ 
+  margin-top: -115px;
+}
+
+
+.item1 {
+    float: left;
+}
+
+.item2 {
+    float:right;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+ /* @media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}  */
+/* .slide{
+    width: 40%;
+  height: 100%;
+  
+    background-image:url("https://ak6.picdn.net/shutterstock/videos/24830246/thumb/6.jpg");
+   background-repeat:no-repeat;
+ background-position:top left;
+ margin-top: 10px;
+ margin-left: 20px;
+
+ 
+
+    animation-name: example;
+    animation-duration: 75s;
+	 animation-iteration-count: infinite;
+} */
+/* Standard syntax */
+/* @keyframes example {
+    0%   {background-image:url("https://ak2.picdn.net/shutterstock/videos/8359894/thumb/1.jpg");}
+    25%  {background-image:url("https://ak5.picdn.net/shutterstock/videos/13504895/thumb/1.jpg"); background-repeat:no-repeat;}
+    50%  {background-image:url("https://cdn.shutterstock.com/shutterstock/videos/18256129/thumb/1.jpg");background-repeat:no-repeat;} 
+    100% {background-image:url("https://cdn.shutterstock.com/shutterstock/videos/18256129/thumb/1.jpg"); background-repeat:no-repeat;} 
+} */
+  
+@media (max-width: 768px) { 
+  p{
+    line-height: 10px;
+    font-size: 5px;
+  }
+  
+h4{
+  font-size: 0px;
+}
+h2{
+  font-size: 25px;
+}
+span{
+font-size:30px;
+color:black;
+  }
+#btn{
+ 
+    padding: 5px 15px;
+    font-size: 10px;
+    border-radius: 4px;
+}
+}
+ 
+ 
+ @media (min-width: 768px)
+  { 
+h2{
+  font-size: 45px;
+  margin-top: 70px;
+}
+    p{
+    line-height: 30px;
+    font-size: 19px;
+  }
+ span{
+font-size:75px;
+color:black;
+  }
+h4{
+  font-size: 30px;
+}
+#section1{
+  height:550px;
+  
+  background-color: #f5faea;
+  
+}
+#btn {
+    padding: 10px 18px;
+    font-size: 20px;
+    border-radius: 8px;
+}
+
+  
+  }
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  h4{
+  font-size: 20px;
+}
+#section1{
+  height:570px;
+}
+
+/* p.one{
+    line-height: 30px;
+    font-size:15px;
+    margin-top: 30px;
+  }
+  p.two{
+    line-height: 30px;
+    font-size:15px;
+    margin-top: 30px;
+  } */
+  p{
+    line-height: 30px;
+    font-size:15px;
+  
+
+  }
+}
+#section2{
+  height:500px;
+  
+  background-color:#333333;
+}
+  
