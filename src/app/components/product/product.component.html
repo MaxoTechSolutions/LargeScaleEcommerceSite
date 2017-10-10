@@ -19,7 +19,7 @@
                         <input type="number" [(ngModel)]="quantity">
                     </div>
                     <h1 class="badge">${{product.price}}</h1>
-                    <button (click)="addToCart(product)" class="btn btn-sm btn-primary">Add to Cart</button>
+                    <button (click)="addToCart(product)" class="btn btn-sm btn-primary" aria-label="Show an example snack-bar">Add to Cart</button>
                     <button (click)="clickedProduct(product)" class="btn btn-sm btn-success">Details</button>
                 </md-card-actions>
             </md-card>

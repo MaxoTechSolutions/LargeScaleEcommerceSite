@@ -1,0 +1,48 @@
+
+    
+     <md-grid-list cols="4" rowHeight= fit  >
+        <md-grid-tile *ngFor="let course of Restuarant"> <md-card style=" width: 220px;background-color:yellow;margin-bottom:10px;" > 
+            
+              <!-- <md-card-header style="margin-top:10px">
+                <!-- <div md-card-avatar class="example-header-image"></div> -->
+                
+               
+              <!-- </md-card-header> --> 
+              <img  src="{{course.img}}" width="150px"height="100px" >
+              <md-card-title>{{ course.name }}</md-card-title>
+             
+            
+               
+            </md-card></md-grid-tile>
+        <!-- <md-grid-tile>2</md-grid-tile>
+        <md-grid-tile>3</md-grid-tile>
+        <md-grid-tile>4</md-grid-tile> -->
+      </md-grid-list>
+     
+     
+     
+     
+     <div class="row">
+        
+      
+        <div class="col-lg-3" *ngFor="let course of Restuarant" >
+         
+          <md-card style=" width: 220px;background-color:yellow;margin-bottom:10px;" > 
+    
+      <!-- <md-card-header style="margin-top:10px">
+        <!-- <div md-card-avatar class="example-header-image"></div> -->
+        
+       
+      <!-- </md-card-header> --> 
+      <img  src="{{course.img}}" width="150px"height="100px" >
+      <md-card-title>{{ course.name }}</md-card-title>
+     
+    
+       
+    </md-card>
+     
+        </div>
+        
+      </div>
+     
+  

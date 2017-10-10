@@ -59,17 +59,22 @@
           
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <a routerLink="/cart"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
-            </li>
-            <li>
-              <div *ngIf="totalPrice">
-                <div class="thumbnail price">
-                  <strong>Total Items: </strong><span class="badge">{{ totalQuantity }}</span> <strong>Total Price: ${{ totalPrice }}</strong>
-                </div>
-              </div>
-            </li>
+              <!-- <a routerLink="/cart"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span><span *ngIf="totalPrice" class="badge">{{ totalQuantity }}</span></a> -->
+              <button md-mini-fab class="example-fab" (click)="sidenav.toggle()"><span class="glyphicon glyphicon-shopping-cart"></span><span *ngIf="totalPrice" class="badge">{{ totalQuantity }}</span></button>
+           
             
           </ul>
+          <!-- <md-sidenav-container>
+          <md-sidenav class="example-sidenav" style="width:200px"  mode="push"  >
+              <ul *ngFor="let cour of course.categories" >
+                <li>
+                  {{cour}}
+                </li>
+              </ul>
+               
+            </md-sidenav>
+          
+             </md-sidenav-container> -->
         </div>
       </div>
     </div>

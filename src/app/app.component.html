@@ -1,6 +1,90 @@
-<navbar></navbar>
-<div class="container">
-  <hr />
-  <router-outlet></router-outlet>
-</div>
+<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color:forestgreen;margin-top:0px;">
+    <div class="container-fluid">
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+        </button>
+    <a><img src="https://desidine2go.com/wp-content/uploads/2015/09/logo.jpg" width="50px" height="50px" ></a>
+        <a class="navbar-brand" routerLink="/" style="font-size:x-large;color:white; font-weight:bold">DesiDine2Go</a>
+        
+      </div>
+      <div> 
+        <div class="collapse navbar-collapse" id="myNavbar" >
+          <ul class="nav navbar-nav"  >
+            
+            <li><a routerLink="/market" style="font-size:large;color:white; font-weight:bold" >My Account</a></li>
+            <li><a routerLink="/cart" style="font-size:large;color:white; font-weight:bold ">Contact Us</a></li>
+           <li><a routerLink="/login" style="font-size:large;color:white; font-weight:bold" > Login</a></li>
+           
+            
+          </ul>
+          
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <!-- <a routerLink="/cart"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span><span *ngIf="totalPrice" class="badge">{{ totalQuantity }}</span></a> -->
+              <button md-mini-fab class="example-fab" (click)="sidenav.open()"><span class="glyphicon glyphicon-shopping-cart"></span><span *ngIf="totalPrice" class="badge">{{ totalQuantity }}</span></button>
+           
+            
+          </ul>
+         
+        </div>
+      </div>
+    </div>
+  </nav>
 
+  <hr />
+
+  <md-sidenav-container class="example-container">
+    <md-sidenav #sidenav class="example-sidenav" mode="push" align="end">
+        <div *ngIf="cart.length <= 0">
+            <h3 class="text-center">No items in the Cart!</h3>
+        </div>
+        <table class="table table-striped table-hover ">
+            <thead>
+                <tr>
+                <th>Quantity Amount</th>
+                <th>Product Name</th>
+                <th>Product Price</th>
+                <th>Product Image</th>
+                </tr>
+            </thead>
+        
+            <tbody>
+              <tr *ngFor="let product of cart | keys ; let i = index">
+                 
+                <td><h4>{{product.info}} *  {{product.name}}</h4></td>
+                
+                <td><h4>{{product.price}}</h4></td>
+                <td><img src={{product.src}} width="100" height="100" /></td>
+                <td><button (click)="removeProduct(product)" class="btn btn-xs btn-danger">Remove Product</button></td>
+              </tr>
+        
+              <tr class="warning">
+                <td><h4></h4></td>
+                <td><h4>Total Items: {{totalQuantity}}</h4></td>
+                <td><h4>Total: ${{totalPrice}}</h4></td>
+                <td><button (click)="openCheckout()">Purchase</button></td>
+              </tr>
+            </tbody>
+        </table>
+      
+    </md-sidenav>
+    
+    <div class="example-sidenav-content">
+        <router-outlet></router-outlet>
+    </div>
+  
+  <!-- </md-sidenav-container> -->
+  <!-- <md-sidenav-container>
+      <router-outlet></router-outlet>
+    
+      <md-sidenav class="example-sidenav" style="width:200px"  mode="push"  align="end">
+          <h1>Hello Dude</h1>
+           
+        </md-sidenav>
+      
+         <!-- </md-sidenav-container> -->
+
+        

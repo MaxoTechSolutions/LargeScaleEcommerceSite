@@ -11,7 +11,7 @@
         </tr>
     </thead>
 
-    <tbody>
+    <tbody> 
       <tr *ngFor="let product of cart | keys ; let i = index">
          
         <td><h4>{{product.info}} *  {{product.name}}</h4></td>
@@ -25,7 +25,7 @@
         <td><h4></h4></td>
         <td><h4>Total Items: {{totalQuantity}}</h4></td>
         <td><h4>Total: ${{totalPrice}}</h4></td>
-        <td><button (click)="checkout()" class="btn btn-md btn-success">Checkout</button></td>
+        <td><button (click)="openCheckout()">Purchase</button></td>
       </tr>
     </tbody>
 </table>

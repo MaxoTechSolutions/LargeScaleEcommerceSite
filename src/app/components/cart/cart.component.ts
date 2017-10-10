@@ -21,8 +21,22 @@ export class CartComponent {
     this.cartStore.removeFromCart(product)
   }
 
-  checkout() {
-    alert('Sorry! Checkout will be coming soon!')
+  openCheckout() {
+    var handler = (<any>window).StripeCheckout.configure({
+      key: 'pk_test_oi0sKPJYLGjdvOXOM8tE8cMa',
+      locale: 'auto',
+      token: function (token: any) {
+        // You can access the token ID with `token.id`.
+        // Get the token ID to your server-side code for use.
+      }
+    });
+
+    handler.open({
+      name: 'DesiDine2Go',
+      description: 'We Deliver Food In Minutes',
+      amount: this.totalPrice * 100 
+    });
+
   }
 
   getTotalPrice() {
@@ -45,7 +59,7 @@ export class CartComponent {
     }, 0)
   }
 
-  ngOnInit() {
+  ngOnInit() { 
     this.cartSubscription = this.cartStore.getState().subscribe(res => {
       this.cart = res.products
       this.getTotalPrice()

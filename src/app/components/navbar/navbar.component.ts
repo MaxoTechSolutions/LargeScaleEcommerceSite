@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ProductService } from '../../services/product.service';
 import { CartAction } from '../../store/actions/cart.actions';
+import{MdSidenav} from '@angular/material';
 
 @Component({
   selector: 'navbar',
