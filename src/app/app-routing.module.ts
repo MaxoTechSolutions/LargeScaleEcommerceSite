@@ -6,11 +6,12 @@ import { ProductComponent } from './components/product/product.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { CartComponent } from './components/cart/cart.component';
 import { RestaurantsComponent } from './components/restaurants/restaurants.component';
+import { HomeComponent } from './home/home.component'
 
 const routes: Routes = [
   {
     path: '',
-    component: ProductComponent
+    component: HomeComponent
   },
   {
     path: 'detail/:id',

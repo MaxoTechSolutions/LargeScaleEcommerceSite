@@ -40,6 +40,7 @@ import {MatGridListModule} from '@angular/material';
 // Importing the pipe 
 import{KeysPipe} from './productfilter.pipe';
 import { RestaurantsComponent } from './components/restaurants/restaurants.component';
+import { HomeComponent } from './home/home.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,6 +48,7 @@ import { RestaurantsComponent } from './components/restaurants/restaurants.compo
     KeysPipe,
     RestaurantsComponent,
   //  PizzaPartyComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,

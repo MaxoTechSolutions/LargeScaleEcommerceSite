@@ -4,10 +4,12 @@ import { CartAction } from './store/actions/cart.actions';
 import{MdSidenav} from '@angular/material';
 import { Subscription } from 'rxjs/Subscription';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.css'],
+    providers: []
 })
 export class AppComponent {
 
@@ -108,4 +110,5 @@ export class AppComponent {
 
   // }
 
+}
 }
