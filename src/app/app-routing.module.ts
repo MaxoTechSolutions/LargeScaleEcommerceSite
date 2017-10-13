@@ -14,6 +14,10 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
+    path: 'restuarant',
+    component: ProductComponent
+  },
+  {
     path: 'detail/:id',
     component: ProductDetailComponent
   },

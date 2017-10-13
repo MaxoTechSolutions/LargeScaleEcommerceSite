@@ -9,14 +9,14 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>                        
       </button>
-  
+        
       <a class="navbar-brand" routerLink="/" style="font-size:x-large;color:white; font-weight:bold">DesiDine2Go</a>
        <a><img src="https://desidine2go.com/wp-content/uploads/2015/09/logo.jpg" width="50px" height="50px" ></a>
-      <a routerLink="/findres" style="font-size:large;color:white; font-weight:bold; padding-left: 30px;" > Find Restaurants</a>
+      <a routerLink="/restuarant" style="font-size:large;color:white; font-weight:bold; padding-left: 30px;" > Find Restaurants</a>
       
        
     </div>
-    <div>
+    
       <div class="collapse navbar-collapse" id="myNavbar" >
         
          <ul class="nav navbar-nav navbar-right">
@@ -29,7 +29,7 @@
          
             <li>  <a routerLink="/cart" style="padding-right:300px;font-size:large;color:white; font-weight:bold">Cart<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
             </li>
-            <li>
+            </ul>
               <!-- <div *ngIf="totalPrice">
                 <div class="thumbnail price">
                   <strong>Total Items: </strong><span class="badge">{{ totalQuantity }}</span> <strong>Total Price: ${{ totalPrice }}</strong>
@@ -42,16 +42,17 @@
    
       <!-- </div> --> -->
       <ul class="nav navbar-nav navbar-right">
-          <li>
+          
             <!-- <a routerLink="/cart"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span><span *ngIf="totalPrice" class="badge">{{ totalQuantity }}</span></a> -->
-            <button md-mini-fab class="example-fab" (click)="sidenav.open()"><span class="glyphicon glyphicon-shopping-cart"></span><span *ngIf="totalPrice" class="badge">{{ totalQuantity }}</span></button>
+            <li><button md-mini-fab class="example-fab" (click)="sidenav.open()"><span class="glyphicon glyphicon-shopping-cart"></span><span *ngIf="totalPrice" class="badge">{{ totalQuantity }}</span></button></li>
          
           
         </ul>
     </div>
-  </div>
+    </div>
+  
 </nav>
-<router-outlet></router-outlet>
+
 
   <md-sidenav-container class="example-container">
     <md-sidenav #sidenav class="example-sidenav" mode="push" align="end">
@@ -92,16 +93,7 @@
     <div class="example-sidenav-content">
         <router-outlet></router-outlet>
     </div>
-  
-  <!-- </md-sidenav-container> -->
-  <!-- <md-sidenav-container>
-      <router-outlet></router-outlet>
-    
-      <md-sidenav class="example-sidenav" style="width:200px"  mode="push"  align="end">
-          <h1>Hello Dude</h1>
-           
-        </md-sidenav>
-      
-         <!-- </md-sidenav-container> -->
+  </md-sidenav-container> 
+ 
 
         

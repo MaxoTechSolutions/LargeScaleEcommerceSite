@@ -19,7 +19,7 @@ export const ActionTypes = {
 export class CartAction {
 
     constructor(private store: Store<any>) {
-
+ 
     }
     getState(): Observable<any> {
         return this.store.select('cart');
