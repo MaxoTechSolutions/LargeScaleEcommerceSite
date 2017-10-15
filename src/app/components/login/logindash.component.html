@@ -1,0 +1,73 @@
+<div class="container">
+
+    <div class="well well-lg row">
+
+        <div class="panel-group col-xs-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading" style="text-align:center;background-color:ForestGreen ">{{Some}} Panel</div>
+
+                <div class="panel-body col-lg-12">
+
+                    <div class="col-lg-0">
+
+                        <h3><b style="color:DarkGreen  ">DESIDINE2GO</b></h3>
+                    </div>
+                    <div class="col-lg-4" style="margin-left: -25px;" id="large">
+
+                        <a (click)="UserChangePanel()" class="btn btn-primary btn-block" style="background-color:ForestGreen "> User</a>
+                        <a (click)="DriverChangePanel()" class="btn btn-primary btn-block" style="background-color:ForestGreen ">Driver</a>
+                        <a (click)="VendorChangePanel()" class="btn btn-primary btn-block" style="background-color:ForestGreen ">Vendor</a>
+
+
+                    </div>
+
+
+                    <div class="col-xs-8">
+
+                        <h3 style="text-align:center;">{{Some}} Login </h3>
+                        <form (ngSubmit)="login(username.value, password.value)">
+
+                            <div class="form-group">
+                                <label>Username</label>
+                                <input type="text" class="form-control" #username>
+
+                            </div>
+
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input type="password" class="form-control" #password>
+
+                            </div>
+
+                            <!-- messages -->
+                            <div *ngIf="successMessage" class="alert alert-success">{{ successMessage }}</div>
+                            <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-success">Login</button><br>
+                                <p><u>Not yet Registered??</u><span><button type="button" class="button btn-primary" [routerLink]="['/login','signUp']">Register here</button></span></p>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+<div class="jumbotron text-center">
+    <div class="container">
+        <h2> OR </h2>
+        <a href=""><img src="../../../assets/img/google.png"></a>
+    </div>
+</div>

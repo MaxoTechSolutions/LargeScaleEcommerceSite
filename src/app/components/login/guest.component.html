@@ -1,0 +1,113 @@
+<div class="container">
+
+
+
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)" *ngIf="!submitted" novalidate>
+        <h2>Register Form</h2>
+        <div class="col-xs-5">
+
+            <!-- FULL NAME -->
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" #nameRef="ngModel" maxlength="15" minlength="4" pattern="[a-zA-Z][a-zA-Z ]+" required class="form-control" name="name" ngModel>
+            </div>
+
+            <!-- Validation: Full Name -->
+            <div *ngIf="nameRef.errors && (nameRef.dirty|| nameRef.touched)" class=" alert alert-danger">
+                <div [hidden]="!nameRef.errors.required">
+                    Please enter a name
+                </div>
+                <div [hidden]="!nameRef.errors.minlength">
+                    Please enter atleast four characters
+                </div>
+                <div [hidden]="!nameRef.errors.pattern">
+                    Please enter valid name
+                </div>
+            </div>
+
+            <!--Email input and validation
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" #refEmail="ngModel" required pattern="[a-z]+@[a-z]+\.(com|co.in)" class="form-control" name="email" ngModel>
+            </div>
+           
+            <div *ngIf="refEmail.errors && (refEmail.dirty||refEmail.touched)" class="alert alert-danger">
+                <div [hidden]="!refEmail.errors.required">
+                    Please enter an email
+                </div>
+                <div [hidden]="!refEmail.errors.pattern">
+                    Please enter valid email
+                </div>
+            </div> -->
+
+            <!-- Email -->
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" #emailRef="ngModel" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required class="form-control" name="email" ngModel>
+            </div>
+
+            <!-- Validation: Full Email -->
+            <div *ngIf="emailRef.errors && (emailRef.dirty|| emailRef.touched)" class=" alert alert-danger">
+                <div [hidden]="!emailRef.errors.required">
+                    Please enter a email
+                </div>
+                <div [hidden]="!emailRef.errors.pattern">
+                    Please enter valid email
+                </div>
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+                <label>Password-test</label>
+                <input type="password" #refPassword="ngModel" maxlength="15" minlength="8" required class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="password" ngModel>
+            </div>
+
+            <!-- Validation: Full Password -->
+            <div *ngIf="refPassword.errors && (refPassword.dirty|| refPassword.touched)" class=" alert alert-danger">
+                <div [hidden]="!refPassword.errors.required">
+                    Please enter a password
+                </div>
+                <div [hidden]="!refPassword.errors.minlength">
+                    Please enter atleast 8 characters
+                </div>
+                <div [hidden]="!refPassword.errors.pattern">
+                    Please valid
+                </div>
+            </div>
+
+
+            <!-- Password 
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" #refPassword="ngModel" maxlength="15" minlength="6" required pattern="/^[A-Za-z\d]{6,15}/" class="form-control" name="password" ngModel>
+            </div>
+
+            <!-- Validation: Password ->
+            <div *ngIf="refPassword.errors && (refPassword.dirty||refPassword.touched)" class="alert alert-danger">
+                <div [hidden]="!refPassword.errors.required">
+                    Forgot to enter password
+                </div>
+                <div [hidden]="!refPassword.errors.minlength">
+                    Please enter atleast four characters
+                </div>
+                <div [hidden]="!refPassword.errors.pattern">
+                    Please enter valid Password
+                    <ul>
+                        <li>at least one letter</li>
+                        <li>at least one number</li>
+                        <li>Length between 6-15</li>
+                    </ul>
+                </div>
+
+            </div>
+                  -->
+
+            <button [disabled]="!userForm.valid" type="submit" class="btn btn-primary">submit</button>
+        </div>
+    </form>
+
+
+</div>
+<div *ngIf="submitted">
+    <h4> registration successful</h4>
+</div>
